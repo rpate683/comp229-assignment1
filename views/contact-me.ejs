@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('common/header'); %>
-</head>
-<body class="container">
 
-<header>
-    <%- include('common/navbar'); %>
-</header>
+    <! -- head -- >
+    <%- include('common/head'); %>
+    <! -- head -- >
+</head><!--/head-->
 
-<main>
-    <div class="jumbotron">
-        <h1>This is contact me page</h1>
-        <p></p>
+<body>
+
+<! -- header -- >
+<%- include('common/header'); %>
+<! -- /header-- >
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Contact Me</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</main>
+</section>
+<!--/#action-->
+<section id="map-section">
+    <div class="container">
+        <div class="contact-info">
+            <h2>Contacts</h2>
+            <address>
+                E-mail: <a href="mailto:patelrahil27@gmail.com">patelrahil27@gmail.com</a> <br>
+                Phone: +1 (647) 978 9209 / +1 408 300 7027 / +91 9998978209  <br>
+            </address>
 
-<footer>
-    <%- include('common/footer'); %>
-</footer>
+            <h2>Address</h2>
+            <address>
+                960 Markham Rd, <br>
+                Scarborough, <br>
+                Ontario, M1H2Y4 <br>
+                Canada <br>
+            </address>
+        </div>
+    </div>
+</section> <!--/#map-section-->
+
+<! -- footer -- >
+<%- include('common/footer'); %>
+<! -- footer -- >
 
 </body>
 </html>

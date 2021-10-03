@@ -1,113 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('common/header'); %>
-</head>
-<body class="container">
 
-<header>
-    <%- include('common/navbar'); %>
-</header>
+    <! -- head -- >
+    <%- include('common/head'); %>
+    <! -- head -- >
+</head><!--/head-->
 
-<main>
-    <div class="jumbotron">
-        <h5>Below are the projects on which I have worked so far.</h5>
+<body>
 
-        <div class="accordion" id="projectsAccordian">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="projectOneHeader">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#projectOneInfo" aria-expanded="true" aria-controls="projectOneInfo">
-                        Project #1
-                    </button>
-                </h2>
-                <div id="projectOneInfo" class="accordion-collapse collapse show" aria-labelledby="projectOne">
-                    <div class="accordion-body">
-                        <div class="card">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="..." class="img-fluid rounded-start" alt="Project 1">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <!--                                        <h5 class="card-title">Card title</h5>-->
-                                        <p class="card-text">This is a wider card with supporting text below as a
-                                            natural lead-in to additional content. This content is a little bit
-                                            longer.</p>
-                                        <!--                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>-->
-                                        <!--                                        </p>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="projectTwoHeader">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#projectTwoInfo" aria-expanded="false" aria-controls="projectTwoInfo">
-                        Project #2
-                    </button>
-                </h2>
-                <div id="projectTwoInfo" class="accordion-collapse collapse" aria-labelledby="projectTwoHeader">
-                    <div class="accordion-body">
-                        <div class="card">
-                            <div class="row g-0">
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <!--                                        <h5 class="card-title">Card title</h5>-->
-                                        <p class="card-text">This is a wider card with supporting text below as a
-                                            natural lead-in to additional content. This content is a little bit
-                                            longer.</p>
-                                        <!--                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>-->
-                                        <!--                                        </p>-->
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <img src="..." class="img-fluid rounded-start" alt="Project #2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="projectThreeHeader">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#projectThreeInfo" aria-expanded="false" aria-controls="projectThreeInfo">
-                        Project #3
-                    </button>
-                </h2>
-                <div id="projectThreeInfo" class="accordion-collapse collapse" aria-labelledby="projectThreeHeader">
-                    <div class="accordion-body">
-                        <div class="card">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="..." class="img-fluid rounded-start" alt="Project #3">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <!--                                        <h5 class="card-title">Card title</h5>-->
-                                        <p class="card-text">This is a wider card with supporting text below as a
-                                            natural lead-in to additional content. This content is a little bit
-                                            longer.</p>
-                                        <!--                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>-->
-                                        <!--                                        </p>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<! -- header -- >
+<%- include('common/header'); %>
+<! -- /header-- >
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">My Portfolio</h1>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</main>
+</section>
+<!--/#action-->
 
-<footer>
-    <%- include('common/footer'); %>
-</footer>
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <ul class="portfolio-filter text-center">
+
+                <div class="portfolio-items">
+                    <div class="col-sm-6 portfolio-item branded magento">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="assets/projects/gyzs.png" class="img-responsive" alt="">
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h2>GYZS - E-commerce Platform</h2>
+                                <h2>Technology stack: Magento, EC2, Redis, Elasticsearch,PHP, MYSQL</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 portfolio-item branded ror">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="assets/projects/dinenow.png" class="img-responsive" alt="">
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h2>Dinenow - Food Delivery platform (Microservice Architecture)</h2>
+                                <h2>Technology stack: RoR, AWS Fargate, Docker,RabbitMQ, Serverless Lambda Function,
+                                    MYSQL</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 portfolio-item branded Magento">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="assets/projects/gmu.png" class="img-responsive" alt="">
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h2>GMU - Big Data analytics Platform</h2>
+                                <h2>Technology stack: Laravel, AWS EC2, Docker,PostgresSQL</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 portfolio-item branded Magento">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="assets/projects/ivoo.png" class="img-responsive" alt="">
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h2>Ivoo - E-commerce Store</h2>
+                                <h2>Technology stack: Magento, AWS EC2, Docker,PostgresSQL, React Native, GraphQL</h2>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+        </div>
+    </div>
+</section>
+<!--/#portfolio-->
+<! -- footer -- >
+<%- include('common/footer'); %>
+<! -- footer -- >
 
 </body>
 </html>

@@ -1,24 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('common/header'); %>
-</head>
-<body class="container">
 
-<header>
-    <%- include('common/navbar'); %>
-</header>
+    <! -- head -- >
+    <%- include('common/head'); %>
+    <! -- head -- >
+</head><!--/head-->
 
-<main>
-    <div class="jumbotron">
-        <h3 class="fs-3">I, Rahil Patel, welcomes you.</h3>
-        <p>I am a student.</p>
+<body>
+
+<! -- header -- >
+<%- include('common/header'); %>
+<! -- /header-- >
+
+<!--/#header-->
+
+<section id="home-slider">
+    <div class="container">
+        <div class="row">
+            <div class="main-slider">
+                <div class="slide-text">
+                    <h1>Hi there!</h1>
+                    <p>I am a Software Engineer. I have have 8+ years of experience in the software Industry. I am
+                        an E-commerce and Cloud Specialist.</p>
+                    <a href="/assets/CV_Rahil_m.pdf" download class="btn btn-common">My Resume</a>
+                </div>
+                <img src="/assets/profile-picture.jpg" class="slider-hill" width="400" height="410" alt="image">
+            </div>
+        </div>
     </div>
-</main>
+    <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+</section>
+<!--/#home-slider-->
 
-<footer>
-    <%- include('common/footer'); %>
-</footer>
+<section id="action" class="responsive">
+    <div class="vertical-center">
+        <div class="container">
+            <div class="row">
+                <div class="action take-tour">
+                    <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <h1 class="title">Software Consultant & Solution Architect</h1>
+                        <p>A full stack developer. Ready to work on your timezone!!</p>
+                    </div>
+                    <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <div class="tour-button">
+                            <a href="/about-me" class="btn btn-common">Want to know more About Me?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#action-->
+
+
+<! -- footer -- >
+<%- include('common/footer'); %>
+<! -- footer -- >
 
 </body>
 </html>
+

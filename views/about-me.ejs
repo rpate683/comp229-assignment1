@@ -1,41 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('common/header'); %>
-</head>
-<body class="container">
 
-<header>
-    <%- include('common/navbar'); %>
-</header>
+    <! -- head -- >
+    <%- include('common/head'); %>
+    <! -- head -- >
+</head><!--/head-->
 
-<main>
-    <div class="jumbotron">
-        <div class="card mb-6">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="assets/profile-picture.jpg" class="img-fluid rounded-circle" alt="Rahil Patel">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Rahilkumar Jayendrakumar Patel</h5>
-                        <h6 class="fs-6">Independent Software Consulatant & Solution Architect</h6>
-                        <p class="card-text">Experienced Polyglot Engineer with a demonstrated history of working in the
-                            computer software industry. Profound knowledge in Rails,Laravel,Magento, MySQL, PHP, jQuery
-                            etc. Strong engineering professional with a Bachelor of Engineering (BE) focused in Computer
-                            Science from Gujarat Technical university.</p>
-                        <p class="card-text"><small class="text-muted">Talks about #AWS, #RoR, #Laravel, #Magento2, and
-                                #RoRDeveloperTalks</small></p>
+<body>
+
+<! -- header -- >
+<%- include('common/header'); %>
+<! -- /header-- >
+
+<section id="features">
+    <div class="container">
+        <div class="row">
+            <div class="single-features">
+                <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <h2>Software Consultant & Solution Architect</h2>
+                    <p class="card-text">Experienced Polyglot Engineer with a demonstrated history of working in the
+                        computer software industry. Profound knowledge in Rails,Laravel,Magento, MySQL, PHP, jQuery
+                        etc. Strong engineering professional with a Bachelor of Engineering (BE) focused in Computer
+                        Science from Gujarat Technical university.</p>
+                    <p class=""><small class="text-muted">Talks about #AWS, #RoR, #Laravel, #Magento2, and #ROR</small>
+                    </p>
+                    <h2>My Certifications</h2>
+                    <section class="logo-list">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <a href="https://www.credly.com/badges/66623ad4-0bee-42d0-9357-90bf2d19cb5f?source=linked_in_profile"><img
+                                                src="/assets/AWS-Developer-Associate-2020.png" width="100"/></a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="https://s3.amazonaws.com/edu-cert.10gen.com/downloads/f650fd586144424bae134ec32b6c99c8/Certificate.pdf"><img
+                                                src="/assets/magento-certification-logo.png" width="200"/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="container" style="margin-top:20px">
+                        <div class="row">
+                            <div class="col-sm-6 marging-top">
+                                <a href="/assets/CV_Rahil_m.pdf" download class="btn btn-common">Download My CV</a>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <img src="assets/software-development.jpg" class="img-responsive" alt="">
+                </div>
+
+            </div>
+            <div class="single-features">
+                <div class="container text-center margin-bottom">
+                    <h1>Expertise In</h1>
+                </div>
+                <div class="col-sm-6 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <section class="logo-list">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-4 col-6">
+                                    <a href="#"><img src="/assets/laravel.png" width="100"/></a>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-6">
+                                    <a href="#"><img src="/assets/microservices.png" width="100"/></a>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-6">
+                                    <a href="#"><img src="/assets/python.png" width="100"/></a>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-6">
+                                    <a href="#"><img src="/assets/ruby-on-rails.png" width="100"/></a>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-6">
+                                    <a href="#"><img src="/assets/aws.png" width="150"/></a>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-6">
+                                    <a href="#"><img src="/assets/magento.png" width="100"/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
     </div>
-</main>
+</section>
 
-<footer>
-    <%- include('common/footer'); %>
-</footer>
+<! -- footer -- >
+<%- include('common/footer'); %>
+<! -- footer -- >
 
 </body>
 </html>
