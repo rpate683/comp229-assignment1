@@ -1,5 +1,5 @@
 /**
- * name: main.css
+ * name: login.js
  * Student ID: 301166451
  * Student Name: Rahilkumar Patel
  * Date: 02-10-2021

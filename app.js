@@ -1,5 +1,5 @@
 /**
- * name: main.css
+ * name: app.js
  * Student ID: 301166451
  * Student Name: Rahilkumar Patel
  * Date: 02-10-2021
@@ -107,6 +107,7 @@ app.use(function (err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.nav = '404';
+    res.locals.user = undefined;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
 
     // render the error page
