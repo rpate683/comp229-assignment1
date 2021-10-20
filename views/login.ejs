@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <! -- head -- >
+    <%- include('common/head'); %>
+    <! -- head -- >
+</head><!--/head-->
+
+<body>
+
+<! -- header -- >
+<%- include('common/header'); %>
+<! -- /header-- >
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="action">
+                    <div class="col-sm-12 text-center">
+                        <h1 class="title">Login</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#action-->
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                <!-- Message Area -->
+                <% if(messages.length > 0) { %>
+                    <div class="alert alert-danger">
+                        <%= messages %>
+                    </div>
+                <% } %>
+                <form method="POST" autocomplete="off">
+                    <fieldset class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Enter username"
+                               id="username" required autofocus>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter password"
+                               id="password" required>
+                    </fieldset>
+
+                    <fieldset class="form-group text-right">
+                        <input type="submit" class="btn btn-primary" value="Login">
+                        <a href="/">
+                            <input type="button" class="btn btn-danger" value="Cancel">
+                        </a>
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#portfolio-->
+
+
+<! -- footer -- >
+<%- include('common/footer'); %>
+<! -- footer -- >
+
+</body>
+</html>
