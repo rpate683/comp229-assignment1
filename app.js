@@ -83,18 +83,20 @@ passport.use(strategy);
 
 // Include Routes.
 const indexRouter = require('./routes/index');
+const loginRouter = require('./routes/login');
 const aboutMeRouter = require('./routes/about-me');
 const projectsRouter = require('./routes/projects');
 const servicesRouter = require('./routes/services');
 const contactMeRouter = require('./routes/contact-me');
-const loginRouter = require('./routes/login');
+const businessContactsRouter = require('./routes/business-contacts');
 
 app.use('/', indexRouter);
+app.use('/', loginRouter);
 app.use('/about-me', aboutMeRouter);
 app.use('/projects', projectsRouter);
 app.use('/services', servicesRouter);
 app.use('/contact-me', contactMeRouter);
-app.use('/', loginRouter);
+app.use('/business-contacts', businessContactsRouter);
 
 
 // catch 404 and forward to error handler

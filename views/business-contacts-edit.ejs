@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <! -- head -- >
+    <%- include('common/head'); %>
+    <! -- head -- >
+</head><!--/head-->
+
+<body>
+
+<! -- header -- >
+<%- include('common/header'); %>
+<! -- /header-- >
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-8">
+                        <h1 class="title">Edit Business Contact</h1>
+                    </div>
+                    <div class="col-sm-4 justify-content-md-right">
+                        <a href="/business-contacts" class="btn btn-primary btn-lg pull-right">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#action-->
+
+<section id="services">
+    <div class="container">
+        <div class="col-md-offset-3 col-md-6">
+            <form class="row g-3 form" method="POST">
+                <div class="col-md-12">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Business Contact Name"
+                           name="name" value="<%= businessContact.name %>"
+                           required>
+                </div>
+                <div class="col-md-12">
+                    <label for="number" class="form-label">Number</label>
+                    <input type="number" class="form-control" id="number" placeholder="Business Contact Number"
+                           name="number" value="<%= businessContact.number %>"
+                           required>
+                </div>
+                <div class="col-md-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Business Contact Email"
+                           name="email" value="<%= businessContact.email %>"
+                           required>
+                </div>
+                <div class="col-md-12">
+                    <br/>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <a href="/business-contacts" class="btn btn-danger">Cancel</a>
+                    <br/>
+                    <br/>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!--/#portfolio-->
+
+
+<! -- footer -- >
+<%- include('common/footer'); %>
+<! -- footer -- >
+
+</body>
+</html>

@@ -38,8 +38,7 @@ module.exports.authenticate = (req, res, next) => {
                 return next(err);
             }
 
-            // todo: change url to business contacts list.
-            return res.redirect('/');
+            return res.redirect('/business-contacts');
         });
     })(req, res, next);
 }
@@ -87,8 +86,7 @@ module.exports.saveUser = (req, res, next) => {
         } else {
             // if no error exists, then registration is successful
             return passport.authenticate('local')(req, res, () => {
-                // todo: change url to business contacts list.
-                res.redirect('/');
+                res.redirect('/business-contacts');
             });
         }
     });
