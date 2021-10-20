@@ -15,6 +15,12 @@ router.get('/login', loginController.login);
 /* POST Route for processing the Login page */
 router.post('/login', loginController.authenticate);
 
+/* GET to perform Register display */
+router.get('/register', loginController.register);
+
+/* GET to perform Register display */
+router.post('/register', loginController.saveUser);
+
 /* GET to perform UserLogout */
 router.get('/logout', loginController.logout);
 

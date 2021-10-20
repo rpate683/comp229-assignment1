@@ -5,20 +5,33 @@
  * Date: 02-10-2021
  */
 
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var aboutMeRouter = require('./routes/about-me');
-var projectsRouter = require('./routes/projects');
-var servicesRouter = require('./routes/services');
-var contactMeRouter = require('./routes/contact-me');
-var loginRouter = require('./routes/login');
+// authentication libs.
+const session = require('express-session');
+const passport = require('passport');
+const passportJWT = require('passport-jwt');
+const JWTStrategy = passportJWT.Strategy;
+const ExtractJWT = passportJWT.ExtractJwt;
 
-var app = express();
+// database connection
+const mongoose = require('mongoose');
+const DB = require('./config/db');
+
+// connect to mongoose
+mongoose.connect(DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
+const mongoDB = mongoose.connection;
+mongoDB.on('error', console.error.bind(console, 'MongoDB connection error:'));
+mongoDB.once('open', () => {
+    console.log('Connected to MongoDB...');
+});
+
+
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,6 +42,52 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//setup express session
+app.use(session({
+    secret: "4b70e058a4791397b3f4d56efcf8e86a1c1f806cd6708d79491eaec0c083319ce73fd78f802c64cd4507032a85179297",
+    saveUninitialized: false,
+    resave: false
+}));
+
+// initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+// create a User Model Instance
+const userModel = require('./models/user');
+const User = userModel.User;
+
+// implement a User Authentication Strategy
+passport.use(User.createStrategy());
+
+// serialize and deserialize the User info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+const jwtOptions = {};
+jwtOptions.jwtFromRequest = ExtractJWT.fromAuthHeaderAsBearerToken();
+jwtOptions.secretOrKey = DB.Secret;
+
+const strategy = new JWTStrategy(jwtOptions, (jwt_payload, done) => {
+    User.findById(jwt_payload.id)
+        .then(user => {
+            return done(null, user);
+        })
+        .catch(err => {
+            return done(err, false);
+        });
+});
+
+passport.use(strategy);
+
+// Include Routes.
+const indexRouter = require('./routes/index');
+const aboutMeRouter = require('./routes/about-me');
+const projectsRouter = require('./routes/projects');
+const servicesRouter = require('./routes/services');
+const contactMeRouter = require('./routes/contact-me');
+const loginRouter = require('./routes/login');
 
 app.use('/', indexRouter);
 app.use('/about-me', aboutMeRouter);

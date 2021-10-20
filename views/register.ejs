@@ -19,7 +19,7 @@
             <div class="row justify-content-md-center">
                 <div class="action">
                     <div class="col-sm-12 text-center">
-                        <h1 class="title">Login</h1>
+                        <h1 class="title">Register</h1>
                     </div>
                 </div>
             </div>
@@ -51,14 +51,21 @@
                                id="password" required>
                     </fieldset>
 
-                    <fieldset class="form-group text-left">
-                        Don't have account? &nbsp;&nbsp;<b><a href="/register">Sign Up</a></b>
+                    <fieldset class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" placeholder="Enter email"
+                               id="email" required>
                     </fieldset>
+
+                    <fieldset class="form-group">
+                        <label for="displayName">Display Name</label>
+                        <input type="text" class="form-control" name="displayName" placeholder="Enter Display Name"
+                               id="displayName" required>
+                    </fieldset>
+
                     <fieldset class="form-group text-right">
-                        <input type="submit" class="btn btn-primary" value="Login">
-                        <a href="/">
-                            <input type="button" class="btn btn-danger" value="Cancel">
-                        </a>
+                        <input type="submit" class="btn btn-primary" value="Register"/>
+                        <a href="/login"><input type="button" class="btn btn-danger" value="Cancel"></a>
                     </fieldset>
 
                 </form>
