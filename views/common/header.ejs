@@ -35,13 +35,6 @@
                     <li <% if(nav === "projects") { %> class="active" <% }%>><a href="/projects">Projects</a></li>
                     <li <% if(nav === "services") { %> class="active" <% }%>><a href="/services">Services</a></li>
                     <li <% if(nav === "contact-me") { %> class="active" <% }%>><a href="/contact-me">Contact Me</a></li>
-                    <% if(user && user.user) { %>
-                        <li <% if(nav === "business-contacts") { %> class="active" <% }%>><a href="/business-contacts">Business Contacts</a></li>
-                        <li><a href="#">Welcome, <%= user.user %></a></li>
-                        <li><a href="/logout" class="nav-link">Logout</a></li>
-                    <% } else { %>
-                        <li <% if(nav === "login") { %> class="active" <% }%>><a href="/login">Login</a></li>
-                    <% } %>
                 </ul>
             </div>
         </div>
